@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.examenandroidlr.DetailViewModel"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#777">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="30dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                app:cardCornerRadius="16dp"
+                android:layout_margin="40dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="centerCrop"
+                    app:ImageConverter="@{viewModel.tvHeroImage}"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_background_gray">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="ID"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroId}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Nombre"
+                        style="@style/TitleText"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroName}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ContainerBorder">
+
+                <TextView
+                    style="@style/TopicText"
+                    android:text="Powerstats" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+                        <TextView
+                            style="@style/TitleText"
+                            android:text="Intelligent" />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroIntelligent}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:text="  Strength  " />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroStrength}" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:text="   Speed   " />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroSpeed}"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:text="Durability" />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroDurability}" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:text=" Power " />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroPower}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ContainerDual">
+
+                        <TextView
+                            style="@style/TitleText"
+                            android:text="Combat" />
+
+                        <TextView
+                            style="@style/InformationText"
+                            android:text="@{viewModel.tvHeroCombat}" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ContainerBorder">
+
+                <TextView
+                    style="@style/TopicText"
+                    android:text="Biography" />
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Full Name" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroFullName}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Alter Egos" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroAlterEgos}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Aliases" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroAliases}"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Place of Birthday" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroPlaceBirthday}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="First Appearance" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroFirstAppearance}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Publisher" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroPublisher}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Alignment" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroAlignment}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ContainerBorder">
+
+                <TextView
+                    style="@style/TopicText"
+                    android:text="Appearance" />
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Gender" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroGender}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Race" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroRace}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Heigth" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroHeigth}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Weigth" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroWeigth}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Eye Color" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroEyeColor}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Hair Color" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroHairColor}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ContainerBorder">
+
+                <TextView
+                    style="@style/TopicText"
+                    android:text="Work" />
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Occupation" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroOcupation}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Base" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroBase}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ContainerBorder"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    style="@style/TopicText"
+                    android:text="Connections" />
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Group Affilation" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroGroupAffilation}"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ContainerDual"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/TitleText"
+                        android:text="Relatives" />
+
+                    <TextView
+                        style="@style/InformationText"
+                        android:text="@{viewModel.tvHeroRelatives}"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
